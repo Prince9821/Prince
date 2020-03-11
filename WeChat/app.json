@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/register/register",
+    "pages/modiPassword/modiPassword",
+    "pages/pageQuery/pageQuery",
+    "pages/pageQueryDetail/pageQueryDetail",
+    "pages/pageQuery2/pageQuery2",
+    "pages/upFileImg/upFileImg"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "便捷停车系统",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

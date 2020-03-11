@@ -1,0 +1,29 @@
+<!--pages/pageQueryDetail/pageQueryDetail.wxml-->
+<view><!--账号-->
+  <label class='headchar'>序号：</label>
+  <label>{{recordOne.idint}}</label>
+</view>
+<view>
+  <label class='headchar'>GUID：</label>
+  <label>{{recordOne.id}}</label>
+</view>
+<view>
+  <label class='headchar'>账号：</label>
+  <label>{{recordOne.myphone}}</label>
+</view>
+<view>
+  <label class='headchar'>姓名：</label>
+  <label>{{recordOne.username}}</label>
+</view>
+<view>
+  <label class='headchar'>用户类型：</label>
+  <label>{{recordOne.usertype}}</label>
+</view>
+<view>
+  <label class='headchar'>昵称：</label>
+  <label>{{recordOne.nickname}}</label>
+</view>
+<!--按钮-->
+<view>
+  <button type='primary' bindtap='returnParent'>返回</button>
+</view>

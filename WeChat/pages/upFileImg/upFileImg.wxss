@@ -1,0 +1,73 @@
+/* pages/upFileImg/upFileImg.wxss */
+.table{
+  border: 0px solid darkgray;
+  width: 100%;
+}
+.tr{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td{
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+}
+.td2{
+  width: 25%;
+  justify-content: center;
+  text-align: center;
+}
+.td3{
+  width: 45%;
+  justify-content: center;
+  text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th{
+  width: 15%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.th2{
+  width: 25%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.th3{
+  width: 45%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+.headchar{
+  color:#ff0000;
+}
+.buttonrow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.limit3digit{
+  width: 30px;
+  border: 1px solid #EA5A3C;
+}

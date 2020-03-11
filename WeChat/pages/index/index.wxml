@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='itemHor'>
+  <label>账号</label>
+  <input placeholder='请在此输入账号' bindinput='myAccountInput' />
+  </view>
+  <view class='itemHor'>
+   <label>密码</label>
+  <input password='true' placeholder='请在此输入密码' bindinput='myPasswordInput' />
+  </view>
+  <view class='buttonrow'>
+  <button type='primary' bindtap='myLogin'>登录</button>
+  <button type='primary' bindtap='myRegister'>注册</button>
+  <button type='primary' bindtap='myModiPassword'>修改密码</button>
+  <button type='primary' bindtap='myPageQuery'>分页查询</button>
+  <button type='primary' bindtap='myPageQuery2'>分页查询二</button>
+  <button type='primary' bindtap='myUpFileImg'>图像上传</button>
+  <button type='primary' bindtap='myUpFile'>文件上传</button>
+  <button type='primary' bindtap='myUpFile'>地图入门</button>
+  <button type='primary' bindtap='myUpFile'>地图标注</button>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

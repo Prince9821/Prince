@@ -1,0 +1,67 @@
+<!--pages/pageQuery2/pageQuery2.wxml-->
+<view class='table' wx:if="{{!showDetail}}">
+  <view class='tr bg-w'>
+    <view class='th'>操作</view>
+    <view class='th'>序号</view>
+    <view class='th2'>账号</view>
+    <view class='th3'>姓名</view>
+  </view>
+  <block wx:for="{{recordList}}" wx:key="{{idint}}">
+    <view class='tr bg-g' wx:if="{{index%2==0}}">
+     <view class='td' catchtap='auditRow' data-editindex='{{index}}'class='editbutton'>详情</view>
+     <view class='td'>{{item.idint}}</view>
+     <view class='td2'>{{item.mphone}}</view>
+     <view class='td3'>{{item.username}}</view>
+    </view>
+    <view class='tr' wx:else>
+     <view class='td' catchtap='auditRow' data-editindex='{{index}}'class='editbutton'>详情</view>
+     <view class='td'>{{item.idint}}</view>
+     <view class='td2'>{{item.mphone}}</view>
+     <view class='td3'>{{item.username}}</view>
+    </view>
+  </block>
+  <view class='buttonrow'>
+    <button type='primary' bindtap='myFirst'>首</button>
+    <button type='primary' bindtap='myPre'>前</button>
+    <button type='primary' bindtap='myNext'>后</button>
+    <button type='primary' bindtap='myBottom'>末</button>
+    <button type='primary' >去</button> <!--bindtap='myGo'不要写代码，只要离开页框就可以了--> 
+    <input bindblur='inputPageNo' class='limit3digit' placeholder='页码' value='{{pageindex}}'></input>
+    <label>/{{totalpage}}页</label>
+  </view>
+  <view class='buttonrow'>
+    <label>每页</label>
+    <input bindblur='inputPageSize' class='limit3digit' placeholder='页长' value='{{pagesize}}'></input>
+    <label>行，共{{totalline}}行</label>
+  </view>
+</view>
+<view wx:if="{{showDetail}}">
+  <view><!--账号-->
+    <label class='headchar'>序号：</label>
+    <label>{{recordOne.idint}}</label>
+  </view>
+  <view>
+    <label class='headchar'>GUID：</label>
+    <label>{{recordOne.id}}</label>
+  </view>
+  <view>
+    <label class='headchar'>账号：</label>
+    <label>{{recordOne.myphone}}</label>
+  </view>
+  <view>
+    <label class='headchar'>姓名：</label>
+    <label>{{recordOne.username}}</label>
+  </view>
+  <view>
+    <label class='headchar'>用户类型：</label>
+    <label>{{recordOne.usertype}}</label>
+  </view>
+  <view>
+    <label class='headchar'>昵称：</label>
+    <label>{{recordOne.nickname}}</label>
+  </view>
+  <!--按钮-->
+  <view>
+    <button type='primary' bindtap='returnParent'>返回</button>
+  </view>
+</view>

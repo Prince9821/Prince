@@ -1,0 +1,4 @@
+/* pages/pageQueryDetail/pageQueryDetail.wxss */
+.headchar{
+  color:#ff0000;
+}
